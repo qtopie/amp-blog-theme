@@ -1,6 +1,12 @@
-{{ define "head" }}
-{{- partial "homepage-head.html" . -}}
+{{ define "amp-scripts" }}
+<script async custom-element="amp-live-list" src="https://cdn.ampproject.org/v0/amp-live-list-0.1.js"></script>
 {{ end }}
+
+{{ define "custom-style" }}
+{{ (resources.Get "css/main.css" | minify ).Content | safeCSS }}
+{{ (resources.Get "css/home.css" | minify ).Content | safeCSS }}
+{{ end }}
+
 
 {{ define "main" }}
 <main id="content" role="main">
@@ -11,14 +17,14 @@
   <h1>Seems it's a blank page...</h1>
   {{ end }}
 
-  <div items>
+  <div class="container">
     {{ range $paginator.Pages }}
     <div class="card">
       <article>
         <h4 class="title"><a href="{{ .Permalink }}">{{ .Title | truncate 25 }}</a></h4>
         <span>{{ .Date.Format "January 2, 2006" }}</span>
         <div class="description">
-          <p mb4 px3>
+          <p>
             <em>{{ .Summary | plainify | truncate 150 }}</em>
             &nbsp;<span><a href="{{ .Permalink }}">Read More>></a></span>
           </p>

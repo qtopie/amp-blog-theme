@@ -1,8 +1,25 @@
 <!doctype html>
 <html amp lang="en">
+
 <head>
-    {{- block "head" . }}{{- end }}
+    <meta charset="utf-8" />
+    <title>{{- block "title" . }}{{- end }}</title>
+    <link rel="canonical" href="{{ .Permalink }}" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="amp-google-client-id-api" content="googleanalytics" />
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+
+    <!-- amp-boilerplate separate one line -->
+    {{ partial "head/amp-boilerplate.html" . | safeHTML }}
+    
+    <!-- amp scripts -->
+    {{ partial "head/common-scripts.html" . }}
+    {{ block "amp-scripts" . }}{{ end }}
+
+    <!-- custom-style -->
+    <style amp-custom="">{{- block "custom-style" . | safeCSS }}{{- end }}</style>
 </head>
+
 <body>
     {{- partial "header.html" . -}}
     <div id="content">
@@ -10,4 +27,5 @@
     </div>
     {{- partial "footer.html" . -}}
 </body>
+
 </html>

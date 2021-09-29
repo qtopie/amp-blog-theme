@@ -1,23 +1,9 @@
-{{- partial "common-head.html" . -}}
-
-<title>The Photo Blog</title>
-<link rel="canonical" href="https://www.ampstart.com/templates/article.amp">
-<meta name="viewport" content="width=device-width">
-<meta name="amp-google-client-id-api" content="googleanalytics">
-
-<script async src="https://cdn.ampproject.org/v0.js"></script>
-<script custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js" async=""></script>
-<script custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js" async=""></script>
-
-
-<style amp-custom="">
   main {
     max-width: 800px;
     margin: 0 auto
   }
 
-  .ampstart-subtitle,
-  body {
+  .ampstart-subtitle, body {
     line-height: 1.5rem;
     letter-spacing: normal
   }
@@ -31,14 +17,12 @@
     color: #fff
   }
 
-  .ampstart-fullpage-hero-heading-text,
-  .ampstart-image-fullpage-hero .ampstart-image-credit {
+  .ampstart-fullpage-hero-heading-text, .ampstart-image-fullpage-hero .ampstart-image-credit {
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
     background: #000;
     padding: 0 1rem .2rem
   }
-
 
   .ampstart-image-fullpage-hero>amp-img {
     max-height: calc(100vh - 3.5rem)
@@ -101,11 +85,11 @@
   amp-carousel .ampstart-image-with-caption {
     margin-bottom: 0
   }
-  
+
   /* section */
+
   h2::before {
     content: ' ';
     margin-top: 3rem;
     display: inline-block;
   }
-</style>
