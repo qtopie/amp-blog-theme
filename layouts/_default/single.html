@@ -4,12 +4,8 @@
 
 {{ define "main" }}
 
-<!-- <article>
-  {{ replaceRE "\\[ (.*) \\]" "&bsol;[ $1 &bsol;]" .Content | safeHTML }}
-</article> -->
-
 <!-- Start Fullpage Hero -->
-<figure class="ampstart-image-fullpage-hero m0 relative mb4">
+<!-- <figure class="ampstart-image-fullpage-hero m0 relative mb4">
   <amp-img width="404" height="720" alt="The Year&#39;s Best Animal Photos" layout="responsive"
     src="../img/article/elephants_narrow.png" media="(max-width: 415px)"></amp-img>
   <amp-img height="720" alt="The Year&#39;s Best Animal Photos" layout="fixed-height"
@@ -31,8 +27,10 @@
           class="ampstart-readmore-text px1">Read more</span></a>
     </footer>
   </figcaption>
-</figure>
+</figure> -->
 <!-- End Fullpage Hero -->
+
+
 <main id="content" role="main" class="">
   <article class="photo-article">
     {{ replaceRE "\\[ (.*) \\]" "&bsol;[ $1 &bsol;]" .Content | safeHTML }}
