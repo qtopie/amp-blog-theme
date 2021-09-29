@@ -1,3 +1,5 @@
+{{- define "language" }}{{ .Language.Lang }}{{ end -}}
+
 {{ define "title" }}{{ .Site.Title }}{{ end }}
 
 {{ define "amp-scripts" }}
@@ -27,7 +29,7 @@
         <span>{{ .Date.Format "January 2, 2006" }}</span>
         <div class="description">
           <p>
-            <em>{{ .Summary | plainify | truncate 150 }}</em>
+            <em>{{ .Summary | plainify | truncate 120 }}</em>
             &nbsp;<span><a href="{{ .Permalink }}">Read More>></a></span>
           </p>
         </div>

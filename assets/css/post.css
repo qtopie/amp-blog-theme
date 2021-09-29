@@ -88,8 +88,40 @@
 
   /* section */
 
+  article.text-content {
+    padding-top: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  article h1 {
+    border-bottom: 1px solid #CCC;
+    padding-bottom: 3px;
+    margin-bottom: 1rem;
+  }
+
   h2::before {
     content: ' ';
     margin-top: 3rem;
     display: inline-block;
+  }
+
+  h3::before {
+    content: ' ';
+    margin-top: 2rem;
+    display: inline-block;
+  }
+
+  h4::before {
+    content: ' ';
+    margin-top: 1rem;
+    display: inline-block;
+  }
+
+  article pre {
+    overflow-x: auto
+  }
+
+  article blockquote {
+    overflow-wrap: break-word;
   }

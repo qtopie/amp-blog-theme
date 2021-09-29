@@ -1,0 +1,5 @@
+<div class="fixed-height-container">
+  <amp-img alt="{{ .Text }}" src="{{ .Destination | safeURL }}" layout="fill" {{ with .Title}} title="{{ . }}" {{ end }}
+    lightbox>
+  </amp-img>
+</div>

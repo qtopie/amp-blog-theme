@@ -1,3 +1,7 @@
+{{- define "language" }}
+{{- if .Params.Lang }}{{ .Params.Lang }}{{ else }}{{ .Language.Lang }}{{- end }}
+{{- end }}
+
 {{ define "title" }}
   {{ if .Title }}
     {{ .Title }}
