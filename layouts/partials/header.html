@@ -3,6 +3,9 @@
   <div role="button" aria-label="open sidebar" on="tap:header-sidebar.toggle" tabindex="0"
     class="ampstart-navbar-trigger  pr2  ">☰
   </div>
+  <nav>
+    <span id="home"><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></span>
+  </nav>
 </header>
 
 <!-- Start Sidebar -->
@@ -11,11 +14,11 @@
     <div role="button" aria-label="close sidebar" on="tap:header-sidebar.toggle" tabindex="0"
       class="ampstart-navbar-trigger items-start">✕</div>
   </div>
-  
+
   <ul class="ampstart-sidebar-faq list-reset m0">
     <li class="ampstart-faq-item"><a href="#" class="text-decoration-none">About</a></li>
     <li class="ampstart-faq-item"><a href="#" class="text-decoration-none">Contact</a></li>
   </ul>
-  </amp-sidebar>
-  <!-- End Sidebar -->
-  <!-- End Navbar -->
+</amp-sidebar>
+<!-- End Sidebar -->
+<!-- End Navbar -->
