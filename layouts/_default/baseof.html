@@ -30,6 +30,7 @@
         {{- block "main" . }}{{- end }}
     </div>
     {{- partial "footer.html" . -}}
+    {{if .Site.GoogleAnalytics }}{{- partial "google-analytics.html" . -}}{{ end }}
 </body>
 
 </html>
