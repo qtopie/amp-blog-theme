@@ -29,16 +29,17 @@
     {{ if .Site.Params.GoogleAdSense }}
     <amp-auto-ads type="adsense" data-ad-client="{{ .Site.Params.GoogleAdSense }}"></amp-auto-ads>
     {{ end }}
+    {{if .Site.GoogleAnalytics }}
+    {{ partial "google-analytics.html" . }}
+    {{ end }}
 
     {{- partial "header.html" . -}}
 
     <div id="content">
         {{- block "main" . }}{{- end }}
     </div>
-
-    {{- partial "footer.html" . -}}
-
-    {{if .Site.GoogleAnalytics }}{{- partial "google-analytics.html" . -}}{{ end }}
+    
+    {{ partial "footer.html" . }}
 </body>
 
 </html>
