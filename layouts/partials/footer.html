@@ -30,7 +30,8 @@
         </svg></a>
     </li>
     <li>
-      <a href="#" target="_blank" class="inline-block p1" aria-label="Link to AMP HTML E-mail"><svg
+      <a href="mailto:?subject=I wanted you to see this site&amp;body=Check out this site {{ .Permalink }}."
+   title="Share by Email" target="_blank" class="inline-block p1" aria-label="Link to AMP HTML E-mail"><svg
           xmlns="http://www.w3.org/2000/svg" width="24" height="18.4" viewBox="0 0 56 43">
           <title>email</title>
           <path
@@ -41,9 +42,9 @@
   </ul>
   <nav class="ampstart-footer-nav">
     <ul class="list-reset flex flex-wrap mb3">
-      <li class="px1"><a class="text-decoration-none ampstart-label" href="#">About</a></li>
-      <li class="px1"><a class="text-decoration-none ampstart-label" href="#">Contact</a></li>
-      <li class="px1"><a class="text-decoration-none ampstart-label" href="#">Terms</a></li>
+      <li class="px1"><a class="text-decoration-none ampstart-label" href="{{ .Site.BaseURL }}about/">About</a></li>
+      <li class="px1"><a class="text-decoration-none ampstart-label" href="mailto:{{- .Site.Author.email -}}?subject=disscussion on this page&amp;body=Check out this post {{ .Permalink }}.">Contact</a></li>
+      <li class="px1"><a class="text-decoration-none ampstart-label" href="{{ .Site.BaseURL }}terms/">Terms</a></li>
     </ul>
   </nav>
   <small>
