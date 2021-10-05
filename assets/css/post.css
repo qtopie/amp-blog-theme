@@ -1,6 +1,7 @@
   main {
     max-width: 800px;
-    margin: 0 auto
+    margin: 0 auto;
+    padding-top: 0.5rem;
   }
 
   .ampstart-subtitle, body {
@@ -86,8 +87,7 @@
     margin-bottom: 0
   }
 
-  /* section */
-
+  /* article */
   article.text-content {
     padding-top: 1rem;
     padding-left: 0.5rem;
@@ -143,6 +143,7 @@
   }
 
   /* .scrollToTop */
+
   :root {
     --color-primary: #005AF0;
     --color-secondary: #00DCC0;
@@ -178,6 +179,7 @@
   }
 
   /* we move the anchor down to componsate the fixed header */
+
   .target {
     position: relative;
   }
@@ -188,5 +190,21 @@
     left: 0;
   }
 
-  .toc {
+  #tags ul, #categories ul {
+    padding-left: 0.5rem;
+    margin: 0px;
+  }
+
+  #tags ul li, #categories ul li {
+    display: inline;
+    margin-right: 0.5rem;
+  }
+
+  #tags ul li.tag-item {
+    background-color: greenyellow;
+  }
+
+  #tags ul li.category-item {
+    background-color: darksalmon;
+    font-size: x-small;
   }

@@ -39,16 +39,37 @@
     </amp-position-observer>
   </div>
 
-  {{ if or (gt .WordCount 200) .Params.toc }}
+  {{ if or (gt .WordCount 200) .Params.Toc }}
   <section class="toc">
     <h2>Table Of Contents</h2>
     {{ .TableOfContents }}
   </section>
   {{ end }}
 
-  <div>
+  <div class="taxonomy">
     <!-- Categories -->
+    {{ with .Params.Categories }}
+    <span id="categories">
+      <ul>
+        <li><strong>Categories</strong>:&nbsp;</li>
+        {{ range . }}
+        <li class="category-item"><a href="{{ $.Site.BaseURL }}categories/{{ . | urlize }}">{{ . }}</a> </li>
+        {{ end }}
+      </ul>
+    </span>
+    {{ end }}
+
     <!-- Tags -->
+    {{ with .Params.tags }}
+    <span id="tags">
+      <ul>
+        <li><strong>Tags</strong>:&nbsp;</li>
+        {{ range . }}
+        <li class="tag-item"><a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}"><em>{{ . }}</em></a> </li>
+        {{ end }}
+      </ul>
+    </span>
+    {{ end }}
   </div>
 
   <article class="text-content">

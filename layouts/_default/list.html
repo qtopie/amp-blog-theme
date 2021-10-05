@@ -1,1 +1,58 @@
-{{ with .GetPage "/" }} {{.Render}} {{end}}
+{{- define "language" }}{{ .Language.Lang }}{{ end -}}
+
+{{- define "title" }}
+{{ if .IsHome }}
+{{ .Site.Title }}
+{{ else }}
+{{ .Title }}
+{{ end }}
+{{ end -}}
+
+{{ define "amp-scripts" }}
+<script async custom-element="amp-live-list" src="https://cdn.ampproject.org/v0/amp-live-list-0.1.js"></script>
+{{ end }}
+
+{{ define "custom-style" }}
+{{ (resources.Get "css/main.css" | minify ).Content | safeCSS }}
+{{ (resources.Get "css/home.css" | minify ).Content | safeCSS }}
+{{ end }}
+
+
+{{ define "main" }}
+<main id="content" role="main">
+  <div class="container">
+
+    {{ $pctx := . }}
+    {{ if .IsHome }}{{ $pctx = .Site }}{{ end }}
+    {{ $paginator := .Paginate $pctx.RegularPages }}
+
+    <!-- Leave blank page messages -->
+    {{ if (eq $paginator.TotalPages 0) }}
+    <h1>Seems it's a blank page...</h1>
+    {{ end }}
+
+    {{ range $paginator.Pages }}
+    <div class="card">
+      <article>
+        <h4 class="title"><a href="{{ .Permalink }}">{{ .Title | truncate 25 }}</a></h4>
+        <span>{{ .Date.Format "January 2, 2006" }}</span>
+        <div class="description">
+          <p>
+            <em>{{ .Summary | plainify | truncate 120 }}</em>
+            &nbsp;<span><a href="{{ .Permalink }}">Read More>></a></span>
+          </p>
+        </div>
+      </article>
+      <div class="thumbnail">
+        <a href="{{ .Permalink }}">
+          <amp-img src="https://amp.dev/static/inline-examples/images/sea.jpg" width="80" height="80" layout="fixed">
+          </amp-img>
+        </a>
+      </div>
+    </div>
+    {{ end }}
+
+  </div>
+
+</main>
+{{ end }}
