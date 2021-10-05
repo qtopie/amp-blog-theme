@@ -49,5 +49,8 @@
   <small>
     © {{ .Site.Author.name }}, {{ .Site.LastChange.Format "2006" }}
   </small>
+  {{ with .Site.Copyright }}
+  <small>{{ . | safeHTML }}</small>
+  {{ end }}
 </footer>
 <!-- End Footer -->
