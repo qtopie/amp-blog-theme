@@ -5,6 +5,8 @@ A simple blog theme supports for [AMP](https://amp.dev/).
 ## Features
 
 - [x] AMP Page
+- [x] Google Analytics
+- [x] Google AdSense
 - [ ] Latex (Math) Support
 
 ## Example Configuration
