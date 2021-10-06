@@ -1,5 +1,5 @@
 <div class="fixed-height-container">
-  <amp-img alt="{{ .Text }}" src="{{ .Page.Permalink | strings.TrimSuffix `/` | strings.TrimSuffix .Page.File.ContentBaseName }}{{ .Destination | safeURL }}" 
+  <amp-img class="contain" alt="{{ .Text }}" src="{{ .Page.Permalink | strings.TrimSuffix `/` | strings.TrimSuffix .Page.File.ContentBaseName }}{{ .Destination | safeURL }}" 
     layout="fill" {{ with .Title}} title="{{ . }}" {{ end }}
     lightbox>
   </amp-img>
