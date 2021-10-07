@@ -48,7 +48,7 @@
   <div class="taxonomy">
     <!-- Categories -->
     {{ with .Params.Categories }}
-    <span id="categories">
+    <span id="post-categories">
       <ul>
         <li><strong>Categories</strong>:&nbsp;</li>
         {{ range . }}
@@ -60,7 +60,7 @@
 
     <!-- Tags -->
     {{ with .Params.tags }}
-    <span id="tags">
+    <span id="post-tags">
       <ul>
         <li><strong>Tags</strong>:&nbsp;</li>
         {{ range . }}

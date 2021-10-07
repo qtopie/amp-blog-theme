@@ -3,9 +3,6 @@
 
 ### Layout Design
 
-- [ ] Home Page, Posts listing like google news
-- [ ] Post Page
-
-
-- [listing articles](https://amp.dev/documentation/guides-and-tutorials/develop/live_blog/)
-
+- [x] Home Page, Posts listing like google news
+- [x] Post Page
+- [ ]live updating

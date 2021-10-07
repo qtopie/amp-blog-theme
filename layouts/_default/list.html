@@ -35,7 +35,12 @@
     <div class="card">
       <article>
         <h4 class="title"><a href="{{ .Permalink }}">{{ .Title | truncate 25 }}</a></h4>
-        <span>{{ .Date.Format "January 2, 2006" }}</span>
+        <div class="metadata">
+          <span>{{ .Date.Format "January 2, 2006" }}</span>
+          {{with .Params.lang}}
+          &Tab;<span>[{{.}}]</span>
+          {{end}}
+        </div>
         <div class="description">
           <p>
             <em>{{ .Summary | plainify | truncate 120 }}</em>

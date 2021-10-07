@@ -88,6 +88,7 @@
   }
 
   /* article */
+
   article.text-content {
     padding-top: 1rem;
     padding-left: 0.5rem;
@@ -131,6 +132,7 @@
   }
 
   /* https://amp.dev/documentation/components/amp-img/#maintaining-the-aspect-ratio-for-images-with-unknown-dimensions */
+
   .fixed-height-container {
     position: relative;
     width: 100%;
@@ -142,6 +144,7 @@
   }
 
   /* .scrollToTop */
+
   :root {
     --color-primary: #005AF0;
     --color-secondary: #00DCC0;
@@ -188,21 +191,22 @@
     left: 0;
   }
 
-  #tags ul, #categories ul {
+  #post-tags ul, #post-categories ul {
     padding-left: 0.5rem;
     margin: 0px;
   }
 
-  #tags ul li, #categories ul li {
+  #post-tags ul li, #post-categories ul li {
     display: inline;
     margin-right: 0.5rem;
   }
 
-  #tags ul li.tag-item {
-    background-color: greenyellow;
+  #post-categories ul li.category-item {
+    font-size: x-small;
+    text-transform: uppercase;
   }
 
-  #tags ul li.category-item {
-    background-color: darksalmon;
-    font-size: x-small;
+  #post-tags ul li.tag-item {
+    background-color: greenyellow;
+    font-size: small;
   }

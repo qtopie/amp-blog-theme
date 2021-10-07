@@ -1913,3 +1913,34 @@
  .ampstart-icon {
    fill: #003f93
  }
+
+ #all-tags ul li, #all-categories ul li {
+   display: inline;
+   margin-right: 0.5rem;
+ }
+
+ #all-categories ul li {
+   text-transform: uppercase;
+ }
+
+ @media (min-width:40.06rem) {
+   .ampstart-related-section-items>li {
+     border: none
+   }
+   .ampstart-related-section-items .ampstart-image-with-caption>figcaption {
+     padding: 1rem 0
+   }
+   .ampstart-related-section-items .ampstart-image-with-caption>amp-img, .ampstart-related-section-items .ampstart-image-with-caption>figcaption {
+     -ms-flex-preferred-size: 100%;
+     flex-basis: 100%
+   }
+ }
+
+ amp-sidebar aside#sidebar {
+   margin-top: 1rem;
+   border-top: 1px solid #CCC;
+   border-bottom: 1px solid #CCC;
+   padding-bottom: 3px;
+   margin-bottom: 1rem;
+   padding-right: 0.5rem;
+ }
