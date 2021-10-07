@@ -1,12 +1,6 @@
 {{- define "language" }}{{ .Language.Lang }}{{ end -}}
 
-{{- define "title" }}
-{{ if .IsHome }}
-{{ .Site.Title }}
-{{ else }}
-{{ .Title }}
-{{ end }}
-{{ end -}}
+{{- define "title" }}{{ .Title }}{{ end -}}
 
 {{ define "amp-scripts" }}
 <script async custom-element="amp-live-list" src="https://cdn.ampproject.org/v0/amp-live-list-0.1.js"></script>

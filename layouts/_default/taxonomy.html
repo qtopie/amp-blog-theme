@@ -1,0 +1,29 @@
+{{- define "language" }}
+{{- if .Params.Lang }}{{ .Params.Lang }}{{ else }}{{ .Language.Lang }}{{- end }}
+{{- end }}
+
+{{ define "title" }}
+{{ if .Title }}
+{{ .Title }}
+{{ else }}
+{{ .Site.Title }}
+{{ end }}
+{{ end }}
+
+
+{{ define "custom-style" }}
+{{ (resources.Get "css/main.css" | minify ).Content | safeCSS }}
+{{ (resources.Get "css/taxonomy.css" | minify ).Content | safeCSS }}
+{{ end }}
+
+{{ define "main" }}
+<main id="content" role="main">
+  <div class="container">
+    <ul>
+      {{ range .Data.Terms.Alphabetical }}
+      <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> ({{ .Count }})</li>
+      {{ end }}
+    </ul>
+  </div>
+</main>
+{{ end }}
