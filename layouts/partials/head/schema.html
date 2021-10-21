@@ -12,7 +12,7 @@
   "author": {
     "@type": "Person",
     "name": {{ .Site.Author.name }},
-    "url": "{{ .Site.BaseURL }}about"
+    "url": "{{ .Site.BaseURL }}about/"
   },
   "copyrightHolder": {{ .Site.Author.name }},
   "copyrightYear": {{ .Date.Format "2006" }},
@@ -21,7 +21,10 @@
   "publisher": {
     "@type": "Organization",
     "name": {{ .Site.Author.name }},
-    "url": "{{ .Site.BaseURL }}about/"
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ .Site.BaseURL }}favicons/favicon-32x32.png"
+    }
   },
   "description": {{ .Summary | plainify | truncate 120 | safeHTML }},
   "keywords": [{{ range $i, $e := .Params.tags }}{{ if $i }}, {{ end }}{{ $e }}{{ end }}]
