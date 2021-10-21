@@ -9,3 +9,5 @@ Disallow: /terms/
 {{- range $taxonomyname, $taxonomy := .Site.Taxonomies }}
 Disallow: /{{ $taxonomyname }}/
 {{- end }}
+
+Sitemap: {{ .Site.BaseURL }}sitemap.xml

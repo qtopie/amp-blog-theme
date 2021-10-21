@@ -8,23 +8,20 @@
   "datePublished": {{ .PublishDate }},
   "dateModified": {{ .Lastmod }},
   "inLanguage": "{{ .Params.Lang | default .Site.LanguageCode }}",
+  "isFamilyFriendly": "true",
   "author": {
     "@type": "Person",
-    "name": {{ .Site.Author }},
+    "name": {{ .Site.Author.name }},
     "url": "{{ .Site.BaseURL }}about"
   },
-  "copyrightHolder": {{ .Site.Author }},
+  "copyrightHolder": {{ .Site.Author.name }},
+  "copyrightYear": {{ .Date.Format "2006" }},
   "copyrightNotice": {{ .Site.Copyright }},
   "mainEntityOfPage": { "@type": "WebPage" },
-   "publisher": {
+  "publisher": {
     "@type": "Person",
-    "name": {{ .Site.Author }},
-    "logo": {
-      "@type": "ImageObject",
-      "url": "{{ .Site.BaseURL }}/favicons/favicon-32x32.png",
-      "width": 32,
-      "height": 32
-    }
+    "name": {{ .Site.Author.name }},
+    "url": "{{ .Site.BaseURL }}about"
   },
   "description": {{ .Summary | plainify | truncate 120 | safeHTML }},
   "keywords": [{{ range $i, $e := .Params.tags }}{{ if $i }}, {{ end }}{{ $e }}{{ end }}]
