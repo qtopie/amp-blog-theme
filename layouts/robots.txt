@@ -1,6 +1,8 @@
 User-agent: *
+Allow: /
+
 {{- range .Pages }}
-{{- if ne .Kind "page"}}
+{{- if and (ne .Kind "page") (ne .Kind "home") }}
 Disallow: {{ .RelPermalink }}
 {{- end }}
 {{- end }}
