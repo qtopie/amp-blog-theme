@@ -19,9 +19,9 @@
   "copyrightNotice": {{ .Site.Copyright }},
   "mainEntityOfPage": { "@type": "WebPage" },
   "publisher": {
-    "@type": "Person",
+    "@type": "Organization",
     "name": {{ .Site.Author.name }},
-    "url": "{{ .Site.BaseURL }}about"
+    "url": "{{ .Site.BaseURL }}about/"
   },
   "description": {{ .Summary | plainify | truncate 120 | safeHTML }},
   "keywords": [{{ range $i, $e := .Params.tags }}{{ if $i }}, {{ end }}{{ $e }}{{ end }}]
