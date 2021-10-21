@@ -10,7 +10,8 @@
   "inLanguage": "{{ .Params.Lang | default .Site.LanguageCode }}",
   "author": {
     "@type": "Person",
-    "name": {{ .Site.Author }}
+    "name": {{ .Site.Author }},
+    "url": "{{ .Site.BaseURL }}about"
   },
   "copyrightHolder": {{ .Site.Author }},
   "copyrightNotice": {{ .Site.Copyright }},
