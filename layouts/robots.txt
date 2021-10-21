@@ -1,11 +1,3 @@
 User-agent: *
-Allow: /
-
-Disallow: /about/
-Disallow: /terms/
-
-{{- range .Pages }}
-{{- if and (ne .Kind "page") (ne .Kind "home") }}
-Disallow: {{ .RelPermalink }}
-{{- end }}
-{{- end }}
+Disallow: /
+Allow: /posts/
