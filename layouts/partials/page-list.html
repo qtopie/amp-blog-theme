@@ -29,7 +29,7 @@
       </article>
       <div class="thumbnail">
         <a href="{{ .Permalink }}">
-          <amp-img src="https://amp.dev/static/inline-examples/images/sea.jpg" width="80" height="80" layout="fixed">
+          <amp-img src="{{ .Params.image | default .Site.Data.default.HeaderBackgroundImage | absURL }}" width="80" height="80" layout="fixed">
           </amp-img>
         </a>
       </div>

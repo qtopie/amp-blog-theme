@@ -1,0 +1,32 @@
+{{- if eq .Kind "page" }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ .Title }},
+  "image": {{ .Params.image | default .Site.Data.default.HeaderBackgroundImage | absURL }},
+  "datePublished": {{ .PublishDate }},
+  "dateModified": {{ .Lastmod }},
+  "inLanguage": "{{ .Params.Lang | default .Site.LanguageCode }}",
+  "author": {
+    "@type": "Person",
+    "name": {{ .Site.Author }}
+  },
+  "copyrightHolder": {{ .Site.Author }},
+  "copyrightNotice": {{ .Site.Copyright }},
+  "mainEntityOfPage": { "@type": "WebPage" },
+   "publisher": {
+    "@type": "Person",
+    "name": {{ .Site.Author }},
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ .Site.BaseURL }}/favicons/favicon-32x32.png",
+      "width": 32,
+      "height": 32
+    }
+  },
+  "description": {{ .Summary | plainify | truncate 120 | safeHTML }},
+  "keywords": [{{ range $i, $e := .Params.tags }}{{ if $i }}, {{ end }}{{ $e }}{{ end }}]
+}
+</script>
+{{- end }}
