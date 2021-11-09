@@ -1,8 +1,5 @@
 User-agent: *
-Allow: /posts/
-
-Disallow: /index.html
-Disallow: /posts/index.html
+Allow: /
 Disallow: /about/
 Disallow: /terms/
 
