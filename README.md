@@ -9,6 +9,7 @@ A simple blog theme supports for [AMP](https://amp.dev/).
 - [x] Google AdSense
 - [x] AMP Image Lightbox
 - [ ] Latex (Math) Support
+- [ ] GitHub markdown layout
 
 ## Example Configuration
 
