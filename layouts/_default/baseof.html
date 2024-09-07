@@ -6,7 +6,7 @@
     <title>{{- block "title" . }}{{- end }}</title>
     <link rel="canonical" href="{{ .Permalink }}" />
     <meta name="viewport" content="width=device-width" />
-    {{ if .Site.GoogleAnalytics }}<meta name="amp-google-client-id-api" content="googleanalytics" />{{ end }}
+    {{ if .Site.Config.Services.GoogleAnalytics.ID }}<meta name="amp-google-client-id-api" content="googleanalytics" />{{ end }}
     <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
@@ -29,7 +29,7 @@
     {{ if .Site.Params.GoogleAdSense }}
     <amp-auto-ads type="adsense" data-ad-client="{{ .Site.Params.GoogleAdSense }}"></amp-auto-ads>
     {{ end }}
-    {{if .Site.GoogleAnalytics }}
+    {{if .Site.Config.Services.GoogleAnalytics.ID }}
     {{ partial "google-analytics.html" . }}
     {{ end }}
 
