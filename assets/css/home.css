@@ -43,3 +43,14 @@ main {
   transition: 0.3s;
   border-radius: 5px;
 }
+
+.container .pagination {
+  margin-top: 2rem;
+  margin-right: 1rem;
+  text-align: right;
+}
+
+.container .pagination ul li {
+  display: inline-block;
+  padding-right: 0.7rem;
+}
