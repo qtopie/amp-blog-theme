@@ -2,9 +2,8 @@
   <div class="container">
 
     <div class="page-list">
-          {{ $pctx := . }}
-          {{ if .IsHome }}{{ $pctx = .Site }}{{ end }}
-          {{ $pages := where $pctx.RegularPages "Type" "posts" }}
+          {{ $pages := $.RegularPages }}
+          {{ if .IsHome }}{{ $pages = where $.Site.RegularPages "Type" "posts" }}{{ end }}
           {{ $paginator := .Paginate $pages}}
           
           <!-- Leave blank page messages -->
