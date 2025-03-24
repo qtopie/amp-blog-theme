@@ -29,8 +29,11 @@
     {{ if .Site.Params.GoogleAdSense }}
     <amp-auto-ads type="adsense" data-ad-client="{{ .Site.Params.GoogleAdSense }}"></amp-auto-ads>
     {{ end }}
-    {{if .Site.Config.Services.GoogleAnalytics.ID }}
+
+    {{ if not hugo.IsProduction }}
+    {{ if .Site.Config.Services.GoogleAnalytics.ID }}
     {{ partial "google-analytics.html" . }}
+    {{ end }}
     {{ end }}
 
     {{- partial "header.html" . -}}
