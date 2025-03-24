@@ -43,12 +43,12 @@
   <nav class="ampstart-footer-nav">
     <ul class="list-reset flex flex-wrap mb3">
       <li class="px1"><a class="text-decoration-none ampstart-label" href="{{ .Site.BaseURL }}about/">About</a></li>
-      <li class="px1"><a class="text-decoration-none ampstart-label" href="mailto:{{- .Site.Author.email -}}?subject=disscussion on this page&amp;body=Check out this post {{ .Permalink }}.">Contact</a></li>
+      <li class="px1"><a class="text-decoration-none ampstart-label" href="mailto:{{- .Site.Params.Author.email -}}?subject=disscussion on this page&amp;body=Check out this post {{ .Permalink }}.">Contact</a></li>
       <li class="px1"><a class="text-decoration-none ampstart-label" href="{{ .Site.BaseURL }}terms/">Terms</a></li>
     </ul>
   </nav>
   <small>
-    © {{ .Site.Author.name }}, {{ .Site.LastChange.Format "2006" }}
+    © {{ .Site.Params.Author.name }}, {{ .Site.Lastmod.Format "2006" }}
   </small>
   {{ with .Site.Copyright }}
   <small>{{.| safeHTML}}</small>

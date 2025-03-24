@@ -11,16 +11,16 @@
   "isFamilyFriendly": "true",
   "author": {
     "@type": "Person",
-    "name": {{ .Site.Author.name }},
+    "name": {{ .Site.Params.Author.name }},
     "url": "{{ .Site.BaseURL }}about/"
   },
-  "copyrightHolder": {{ .Site.Author.name }},
+  "copyrightHolder": {{ .Site.Params.Author.name }},
   "copyrightYear": {{ .Date.Format "2006" }},
   "copyrightNotice": {{ .Site.Copyright }},
   "mainEntityOfPage": { "@type": "WebPage" },
   "publisher": {
     "@type": "Organization",
-    "name": {{ .Site.Author.name }},
+    "name": {{ .Site.Params.Author.name }},
     "logo": {
       "@type": "ImageObject",
       "url": "{{ .Site.BaseURL }}favicons/favicon-32x32.png"

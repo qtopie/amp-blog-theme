@@ -1,8 +1,11 @@
-<script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
-<script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
+<script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-1.0.js"></script>
+<script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-1.0.js"></script>
 {{ if .Site.Config.Services.GoogleAnalytics.ID }}
-<script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+<script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-1.0.js"></script>
 {{ end }}
 {{ if .Site.Params.GoogleAdSense }}
-<script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
+<script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-1.0.js"></script>
+{{ end }}
+{{ if .Store.Get "hasMath" }}
+<script async custom-element="amp-mathml" src="https://cdn.ampproject.org/v0/amp-mathml-1.0.js"></script>
 {{ end }}
